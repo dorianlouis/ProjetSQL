@@ -1,12 +1,6 @@
 import java.sql.*;
 
 public class ApplicationCentrale {
-
-    /*
-    private String url = "jdbc:postgresql://172.24.2.6:5432/dbcdamas14";
-    Connection conn=null;
-    */
-
     public static void test() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -15,10 +9,10 @@ public class ApplicationCentrale {
             System.exit(1);
         }
 
-        String url="jdbc:postgresql://@localhost/postgres";
+        String url="jdbc:postgresql://localhost:5432/postgres";
         Connection conn=null;
         try {
-            conn=DriverManager.getConnection(url,"cdamas14","azerty");
+            conn=DriverManager.getConnection(url,"postgres","azerty");
         } catch (SQLException e) {
             System.out.println("Impossible de joindre le server !");
             System.exit(1);
