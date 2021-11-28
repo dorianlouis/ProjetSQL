@@ -99,14 +99,17 @@ public class TestAppCentrale {
         System.out.print("Veuillez entrer le bloc des étudiants que vous voulez voir : ");
         int bloc = scanner.nextInt();
         scanner.nextLine();
+        System.out.println();
         app.visualiserEtudiantBloc(bloc);
     }
 
     private static void visualiserToutEtudiants() {
+        System.out.println();
         app.visualiserToutEtudiants();
     }
 
     private static void visualiserEtudiantsPaeNonValide() {
+        System.out.println();
         app.visualiserEtudiantsPaeNonValide();
     }
 
@@ -114,6 +117,7 @@ public class TestAppCentrale {
         System.out.print("Veuillez le bloc des UEs que vous voulez voir : ");
         int bloc = scanner.nextInt();
         scanner.nextLine();
+        System.out.println();
         app.visualiserUeBloc(bloc);
     }
 }
