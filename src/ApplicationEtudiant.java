@@ -1,6 +1,7 @@
 import java.sql.*;
 
 public class ApplicationEtudiant {
+
     public static void test() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -18,4 +19,7 @@ public class ApplicationEtudiant {
             System.exit(1);
         }
     }
+
+
+    
 }
