@@ -41,6 +41,7 @@ public class ApplicationCentrale {
             System.out.println(e.getMessage().split("\n")[0]);
             System.exit(1);
         }
+
     }
 
     public void ajouterUneUe(String code, String nom, int bloc, int nbrCred) {
@@ -70,6 +71,8 @@ public class ApplicationCentrale {
     }
 
     public void ajouterEtudiant(String nom, String prenom, String email, String mdp) {
+        String sel = BCrypt.gensalt();
+        mdp = BCrypt.hashpw(mdp,sel);
         try {
             ajouterEtudiant.setString(1,nom);
             ajouterEtudiant.setString(2,prenom);

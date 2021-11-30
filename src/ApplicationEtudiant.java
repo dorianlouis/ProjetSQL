@@ -39,6 +39,7 @@ public class ApplicationEtudiant {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+
     }
 
     public boolean seConnecter(String email, String mdp) {
@@ -46,7 +47,7 @@ public class ApplicationEtudiant {
             seConnecter.setString(1,email);
             try(ResultSet rs = seConnecter.executeQuery()) {
                 while(rs.next()) {
-                    if(rs.getString(5).equals(mdp)) {
+                    if(BCrypt.checkpw(mdp,rs.getString(5))) {
                         return true;
                     }
                 }
