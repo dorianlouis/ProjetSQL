@@ -1,6 +1,5 @@
 import java.sql.*;
 
-
 public class ApplicationEtudiant {
     private static PreparedStatement seConnecter;
     private static PreparedStatement ajouterUneUePae;

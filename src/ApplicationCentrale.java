@@ -38,7 +38,7 @@ public class ApplicationCentrale {
             visualiserEtudiantsPaeNonValide = conn.prepareStatement("SELECT e.nom, e.prenom, e.credits_valides FROM projet.etudiants e WHERE e.pae_valide = 0;");
             visualiserUeBloc = conn.prepareStatement("SELECT u.code_ue, u.titre, u.nombre_inscrits FROM projet.ues u WHERE u.bloc = ? ORDER BY u.nombre_inscrits;");
         } catch (SQLException e) {
-            System.out.println(e.getMessage().split("\n")[0]);
+            System.out.println(e.getMessage());
             System.exit(1);
         }
 

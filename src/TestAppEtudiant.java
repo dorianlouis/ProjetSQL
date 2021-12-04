@@ -14,6 +14,8 @@ public class TestAppEtudiant {
                 System.out.print("Entrez votre mot de passe : ");
                 String mdp = scanner.nextLine();
                 estConnecte = app.seConnecter(email,mdp);
+                if(!estConnecte)
+                    System.out.println("Vos email et/ou votre mot de passe est incorrect");
                 System.out.println();
             }
 

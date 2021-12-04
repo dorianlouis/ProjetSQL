@@ -50,7 +50,6 @@ public class TestAppCentrale {
             }
 
         } while (choix >= 1 && choix <= 8);
-
     }
 
     private static void ajouterUe(){
