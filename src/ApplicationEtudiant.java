@@ -27,6 +27,17 @@ public class ApplicationEtudiant {
             System.exit(1);
         }
 
+        /* connexion ordi de l'ecole
+        String url="jdbc:postgresql://172.24.2.6:5432/dbaminenemmaoui";
+        Connection conn=null;
+        try {
+            conn= DriverManager.getConnection(url,"aminenemmaoui","UPG8ILC7T");
+        } catch (SQLException e) {
+            System.out.println("Impossible de joindre le server !");
+            System.exit(1);
+        }
+        */
+
         try {
             seConnecter = conn.prepareStatement("SELECT * FROM projet.etudiants e WHERE e.email = ?");
             ajouterUneUePae = conn.prepareStatement("SELECT * FROM projet.ajouterUePae(?, ?)");
